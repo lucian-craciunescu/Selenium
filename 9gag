@@ -1,0 +1,5 @@
+//a[@href='https://www.instagram.com/potatozzz'] - Potatoz button
+//h2[text()='News'] - News button
+//div[text()='Trending'] - Trending button
+//div[text()='Old Meme'] - Old Meme
+//h2[text()='Happy to know that there are still good people in the world.'] - Title
