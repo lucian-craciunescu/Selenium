@@ -11,6 +11,7 @@ import java.time.Duration;
 public class DemoQATest {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://demoqa.com/");
 
         WebElement element = driver.findElement(By.xpath("//div[@class=\"card-body\"]"));
@@ -23,6 +24,7 @@ public class DemoQATest {
         userName.click();
         userName.sendKeys("Lucian-Mihai Craciunescu");
 
+
         WebElement userEmail = driver.findElement(By.xpath("//*[@id=\"userEmail\"]"));
         userEmail.click();
         userEmail.sendKeys("lucian.mihai.craciunescu@gmail.com");
@@ -31,9 +33,10 @@ public class DemoQATest {
         adress.click();
         adress.sendKeys("Cluj Romania");
 
-        WebElement permanentAdress   = driver.findElement(By.xpath("//*[@id=\"permanentAddress\"]"));
+        WebElement permanentAdress = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"permanentAddress\"]")));
         permanentAdress.click();
-        permanentAdress.sendKeys("Bucharest Romania");
+        permanentAdress.sendKeys("Cluj Romania");
+
 
         WebElement submit = driver.findElement(By.xpath("//*[@id=\"submit\"]"));
         submit.click();
