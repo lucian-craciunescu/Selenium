@@ -62,7 +62,7 @@ public class SeleniumTest {
                 ExpectedConditions.elementToBeClickable(By.xpath("//div/div/div/div/input[@class='oxd-input oxd-input--active']"))
         );
         addAdressButton.click();
-        addAdressButton.sendKeys("Bucharest Blvd");
+        addAdressButton.sendKeys("Camil Ressu");
 
         WebElement saveButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
         saveButton.click();
